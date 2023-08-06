@@ -16,11 +16,11 @@
                 "icon": {
                     "width": 16,
                     "height": 16,
-                    "url": "https://https://accessibility-labeler-plugin.onrender.com/app_icon"
+                    "url": "https://accessibility-labeler-plugin.onrender.com/app_icon"
                 },
                 "target": {
                     "type": "web_panel",
-                    "url": "https://https://accessibility-labeler-plugin.onrender.com/Existing_IssueV3"
+                    "url": "https://accessibility-labeler-plugin.onrender.com/Existing_IssueV3"
                 },
                 "tooltip": {
                     "value": "Check Label Accuracy"
