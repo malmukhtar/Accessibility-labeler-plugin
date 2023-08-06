@@ -60,7 +60,7 @@ app.post('/predict', (req, res) => {
     var parsed_issue_text = total_issue_text.replaceAll(/\s/g,'%20');
     var parsed_issue_text1 = parsed_issue_text.replaceAll('"', '');
 
-    fetch(`https://issue-labeler-model.herokuapp.com/predict?issue=${parsed_issue_text1}`, {
+    fetch(`https://malmukhtar-accessibility-labeler.hf.space?issue=${parsed_issue_text1}`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json'
@@ -73,22 +73,16 @@ app.post('/predict', (req, res) => {
         var prediction = JSON.parse(text);
         var label = "";
         var confidence;
-        var bug = parseFloat(prediction["Bug"]);
-        var improvement = parseFloat(prediction["Improvement"]);
-        var NF = parseFloat(prediction["New Feature"]);
-        if(bug > improvement && bug > NF){
-            label = "Bug";
-            confidence = bug;
+        var accessibility = parseFloat(prediction["Accessibility"]);
+        var naccessibility = parseFloat(prediction["Non-accessibility"]);
+        if(accessibility > naccessibility){
+            label = "Accessibility";
+            confidence = accessibility;
+        }else{
+            label = "Non-accessibility";
+            confidence = naccessibility;
         }
-        if(improvement > bug && improvement > NF){
-            label = "Improvement";
-            confidence = improvement;
-        }
-        if(NF > improvement && NF > bug){
-            label = "New Feature";
-            confidence = NF;
-        }
-        var results = JSON.parse(JSON.stringify({"label":label, "confidence":confidence, "current_issue_type":issue_type, "bug": bug, "improvement": improvement, "nf": NF}));
+        var results = JSON.parse(JSON.stringify({"label":label, "confidence":confidence, "current_issue_type":issue_type, "Accessibility": accessibility, "Non-accessibility": naccessibility}));
         console.log(results);
         res.json(results);
         })
