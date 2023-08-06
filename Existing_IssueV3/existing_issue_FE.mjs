@@ -92,12 +92,6 @@ function predict(){
                         
                 }
     
-    
-                if(type_check==0){
-                    document.getElementsByTagName("th")[0].style.backgroundColor = "rgb(247, 179, 179)";
-                    document.getElementsByTagName("th")[1].style.backgroundColor = "rgb(247, 179, 179)";
-                }
-    
                 var dummyText = "";
                 return dummyText;
             })
