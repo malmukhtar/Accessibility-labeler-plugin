@@ -56,39 +56,39 @@ function predict(){
                 var n2 = n1.toString();
     
                 
-                if(issue_type!=label){
-                    document.getElementById("icon").src = "https://accessibility-labeler-plugin.onrender.com/warning";
-                    if(span_check==1){
-                        document.getElementById("right").remove();
-                        span_check = 0;
-                    }
-                    if(span_check==0){
-                        document.getElementById("icon-span").innerHTML += "<span id='wrong'>The current issue type (<b>"+issue_type+"</b>) does not match the predicted issue type (<b>"+correct_type+"</b>)!</span>";
-                        span_check = -1;
-                    }
-                }
-                else{
-                    type_check = 1;
-                    document.getElementById("icon").src = "https://accessibility-labeler-plugin.onrender.com/correct";
-                    if(span_check==-1){
-                        document.getElementById("wrong").remove();
-                        span_check = 0;
-                    }
-                    if(span_check==0){
-                        document.getElementById("icon-span").innerHTML += "<span id='right'>The current issue type matches the predicted issue type!</span>";
-                        span_check=1;
-                    }
-                }
+                // if(issue_type!=label){
+                //     document.getElementById("icon").src = "https://accessibility-labeler-plugin.onrender.com/warning";
+                //     if(span_check==1){
+                //         document.getElementById("right").remove();
+                //         span_check = 0;
+                //     }
+                //     if(span_check==0){
+                //         document.getElementById("icon-span").innerHTML += "<span id='wrong'>The current issue type (<b>"+issue_type+"</b>) does not match the predicted issue type (<b>"+correct_type+"</b>)!</span>";
+                //         span_check = -1;
+                //     }
+                // }
+                // else{
+                //     type_check = 1;
+                //     document.getElementById("icon").src = "https://accessibility-labeler-plugin.onrender.com/correct";
+                //     if(span_check==-1){
+                //         document.getElementById("wrong").remove();
+                //         span_check = 0;
+                //     }
+                //     if(span_check==0){
+                //         document.getElementById("icon-span").innerHTML += "<span id='right'>The current issue type matches the predicted issue type!</span>";
+                //         span_check=1;
+                //     }
+                // }
     
                 var res_tab = document.getElementById("result");
                 res_tab.innerHTML = "";
     
                 if(accessibility>naccessibility){
-                    res_tab.innerHTML += "<tr><th class='correct1'>Accessibility </th><th><span class='ratings' title='Confidence: "+a2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+a2+"%'></span></span></th></tr>";
-                    res_tab.innerHTML += "<tr><td class='other'>Non-accessibility </td><td><span class='ratings' title='Confidence: "+n2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+n2+"%'></span></span></td></tr>";
+                    res_tab.innerHTML += "<tr><th class='correct1'>Accessibility </th><th><span class='ratings' title='Confidence: "+a2+"%'>"+a2+" %</span></th></tr>";
+                    res_tab.innerHTML += "<tr><td class='other'>Non-accessibility </td><td><span class='ratings' title='Confidence: "+n2+"%'>"+n2+" %</span></th></tr>";
                 }else{
-                    res_tab.innerHTML += "<tr><th class='correct1'>Non-accessibility </th><th><span class='ratings' title='Confidence: "+n2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+n2+"%'></span></span></th></tr>";
-                    res_tab.innerHTML += "<tr><td class='other'>Accessibility </td><td><span class='ratings' title='Confidence: "+a2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+a2+"%'></span></span></td></tr>";
+                    res_tab.innerHTML += "<tr><th class='correct1'>Non-accessibility </th><th><span class='ratings' title='Confidence: "+n2+"%'>"+n2+" %</span></th></tr>";
+                    res_tab.innerHTML += "<tr><td class='other'>Accessibility </td><td><span class='ratings' title='Confidence: "+a2+"%'>"+a2+" %</span></th></tr>";
                         
                 }
     
