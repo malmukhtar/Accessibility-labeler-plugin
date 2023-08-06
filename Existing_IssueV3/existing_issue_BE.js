@@ -82,7 +82,7 @@ app.post('/predict', (req, res) => {
             label = "Non-accessibility";
             confidence = naccessibility;
         }
-        var results = JSON.parse(JSON.stringify({"label":label, "confidence":confidence, "current_issue_type":issue_type, "Accessibility": accessibility, "Non-accessibility": naccessibility}));
+        var results = JSON.parse(JSON.stringify({"label":label, "confidence":confidence, "current_issue_type":issue_type, "accessibility": accessibility, "naccessibility": naccessibility}));
         console.log(results);
         res.json(results);
         })
