@@ -20,7 +20,7 @@
                 },
                 "target": {
                     "type": "web_panel",
-                    "url": "https://https://accessibility-labeler-plugin.onrender.com/Existing_Issue"
+                    "url": "https://https://accessibility-labeler-plugin.onrender.com/Existing_IssueV3"
                 },
                 "tooltip": {
                     "value": "Check Label Accuracy"
