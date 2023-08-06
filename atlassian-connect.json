@@ -1,6 +1,6 @@
 {
     "name": "Accessibility Labeler",
-    "description": "Accessibility classification tool. Classifies new or existing issues whether it's accessibility or Non-Accessibility issues. This tool classifies issues based on their titles (summaries) and descriptions using an NLP model based on Google Open-AI's pre-trained BERT model.",    "key": "predictool.app",
+    "description": "Accessibility classification tool. Classifies new or existing issues whether it's accessibility or Non-Accessibility issues. This tool classifies issues based on their titles (AKA summaries) and descriptions using an NLP model based on Google Open-AI's pre-trained BERT model.",    "key": "predictool.app",
     "baseUrl": "https://accessibility-labeler-plugin.onrender.com/",
     "vendor": {
         "name": "Oakland University",
