@@ -1,11 +1,10 @@
 {
-    "name": "Issue Labeler",
-    "description": "Issue classification tool. Classifies new or existing issues into one of three classes: Bug, Improvement, or New Feature. This tool classifies issues based on their titles (summaries) and descriptions using an NLP model based on Google Open-AI's pre-trained BERT model.",
-    "key": "predictool.app",
-    "baseUrl": "https://issue-labeler-plugin.herokuapp.com/",
+    "name": "Accessibility Labeler",
+    "description": "Accessibility classification tool. Classifies new or existing issues whether it's accessibility or Non-Accessibility issues. This tool classifies issues based on their titles (summaries) and descriptions using an NLP model based on Google Open-AI's pre-trained BERT model.",    "key": "predictool.app",
+    "baseUrl": "https://accessibility-labeler-plugin.onrender.com/",
     "vendor": {
-        "name": "Prince Mohammad Bin Fahd University",
-        "url": "https://pmu.edu.sa"
+        "name": "Oakland University",
+        "url": "https://oakland.edu/"
     },
     "authentication": {
         "type": "none"
@@ -17,11 +16,11 @@
                 "icon": {
                     "width": 16,
                     "height": 16,
-                    "url": "https://issue-labeler-plugin.herokuapp.com/app_icon"
+                    "url": "https://https://accessibility-labeler-plugin.onrender.com/app_icon"
                 },
                 "target": {
                     "type": "web_panel",
-                    "url": "https://issue-labeler-plugin.herokuapp.com/Existing_IssueV3"
+                    "url": "https://https://accessibility-labeler-plugin.onrender.com/Existing_Issue"
                 },
                 "tooltip": {
                     "value": "Check Label Accuracy"
