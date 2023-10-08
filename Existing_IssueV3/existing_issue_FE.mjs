@@ -84,12 +84,16 @@ function predict(){
                 res_tab.innerHTML = "";
     
                 if(accessibility>naccessibility){
-                    res_tab.innerHTML += "<tr><th class='correct1'>Accessibility </th><th><span class='ratings' title='Confidence: "+a2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+a2+"%'></span></span></td></tr>";
-                    res_tab.innerHTML += "<tr><td class='other'>Non-accessibility </td><td><span class='ratings' title='Confidence: "+n2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+n2+"%'></span></span></td></tr>";
+                    res_tab.innerHTML +="<div class='label'><strong>Label:</strong><span>Accessibility</span></div>";
+                    res_tab.innerHTML +="<div class='confidence'><strong>Confidence Level:</strong><span>"+a2+"</span></div>"
+                    // res_tab.innerHTML += "<tr><th class='correct1'>Accessibility </th><th><span class='ratings' title='Confidence: "+a2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+a2+"%'></span></span></td></tr>";
+                    // res_tab.innerHTML += "<tr><td class='other'>Non-accessibility </td><td><span class='ratings' title='Confidence: "+n2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+n2+"%'></span></span></td></tr>";
 
                 }else{
-                    res_tab.innerHTML += "<tr><th class='correct1'>Non-accessibility </th><th><span class='ratings' title='Confidence: "+n2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+n2+"%'></span></span></td></tr>";
-                    res_tab.innerHTML += "<tr><td class='other'>Accessibility </td><td><span class='ratings' title='Confidence: "+a2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+a2+"%'></span></span></td></tr>";
+                    res_tab.innerHTML +="<div class='label'><strong>Label:</strong><span>Non-Accessibility</span></div>";
+                    res_tab.innerHTML +="<div class='confidence'><strong>Confidence Level:</strong><span>"+n2+"</span></div>"
+                    // res_tab.innerHTML += "<tr><th class='correct1'>Non-accessibility </th><th><span class='ratings' title='Confidence: "+n2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+n2+"%'></span></span></td></tr>";
+                    // res_tab.innerHTML += "<tr><td class='other'>Accessibility </td><td><span class='ratings' title='Confidence: "+a2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+a2+"%'></span></span></td></tr>";
                         
                 }
     
