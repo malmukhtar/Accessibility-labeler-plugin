@@ -29,9 +29,9 @@
             width: 70%;
             padding: 10px;
             display: inline-block;
-            border: 2px solid #3498db; /* Blue border color */
-            border-radius: 10px; /* Adjust the border-radius for more or less rounding */
-      
+            
+            /* Adjust the border-radius for more or less rounding */
+
         }
 
         .correct1 {
@@ -139,14 +139,27 @@
             /* Adjust the width as needed */
             display: inline-block;
         }
-            /* Firefox */
-            @-moz-document url-prefix() {
-                .full-stars {
-                    color: #ECBE24;
-                }
-            }
 
-            /* IE 
+        .green-box {
+            border: 2px solid #0b680b;
+            background-color: #b0ffb4;
+            border-radius: 10px;
+        }
+
+        .red-box {
+            border: 2px solid #881515;
+            background-color: #b0ffb4;
+            border-radius: 10px;
+        }
+
+        /* Firefox */
+        @-moz-document url-prefix() {
+            .full-stars {
+                color: #ECBE24;
+            }
+        }
+
+        /* IE 
             <!--[if IE]> .full-stars {
                 color: #ECBE24;
             }
@@ -158,8 +171,8 @@
     <!-- <div id="predict">
             <table id="result"></table>
         </div> -->
-        <!-- <div class="info-container" ></div>-->
-        <div id="result"> </div>
+    <!-- <div class="info-container" ></div>-->
+    <div id="result"> </div>
     <!-- <span id="icon-span"><img id="icon" src=""/></span> -->
 </body>
 

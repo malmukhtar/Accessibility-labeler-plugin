@@ -84,13 +84,13 @@ function predict(){
                 res_tab.innerHTML = "";
     
                 if(accessibility>naccessibility){
-                    res_tab.innerHTML +="This issue is <b>Accessibility</b> related with <b>%"+a2+"</b> confidence level";
+                    res_tab.innerHTML +="<div class='green-box'>This issue is <strong>Accessibility</strong> related with <strong>%"+a2+"</strong> confidence level</div>";
                     // res_tab.innerHTML +="<div class='confidence'><strong>Confidence Level:</strong><span>%"+a2+"</span></div>"
                     // res_tab.innerHTML += "<tr><th class='correct1'>Accessibility </th><th><span class='ratings' title='Confidence: "+a2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+a2+"%'></span></span></td></tr>";
                     // res_tab.innerHTML += "<tr><td class='other'>Non-accessibility </td><td><span class='ratings' title='Confidence: "+n2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+n2+"%'></span></span></td></tr>";
 
                 }else{
-                    res_tab.innerHTML +="This issue is <b>Not related to Accessibility</b> with <b>%"+n2+"</b> confidence level";
+                    res_tab.innerHTML +="<div class='red-box'>This issue is <strong>Non-Accessibility</strong> related with <strong>%"+n2+"</strong> confidence level</div>";
                     // res_tab.innerHTML +="<div class='confidence'><strong>Confidence Level:</strong><span>%"+n2+"</span></div>"
                     // res_tab.innerHTML += "<tr><th class='correct1'>Non-accessibility </th><th><span class='ratings' title='Confidence: "+n2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+n2+"%'></span></span></td></tr>";
                     // res_tab.innerHTML += "<tr><td class='other'>Accessibility </td><td><span class='ratings' title='Confidence: "+a2+"%'><span class='empty-stars'></span><span class='full-stars' style='width:"+a2+"%'></span></span></td></tr>";
